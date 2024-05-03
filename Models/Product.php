@@ -2,7 +2,7 @@
 
 require_once __DIR__ . 'Animals.php';
 
-class Products
+class Product
 {
   protected $id;
   protected $name;
