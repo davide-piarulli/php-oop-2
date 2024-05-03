@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/Model/Cani.php';
-require_once __DIR__ . '/Model/Gatti.php';
+require_once __DIR__ . '/Models/Cani.php';
+require_once __DIR__ . '/Models/Gatti.php';
 
 
 
