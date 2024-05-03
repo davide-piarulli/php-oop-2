@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . 'Product.php';
+require_once __DIR__ . '/Product.php';
 
 class Cucce extends Product
 {
@@ -9,8 +9,16 @@ class Cucce extends Product
   public $animalSize;
   public $rating;
 
-  public function __construct(int $_id, string $_name, float $_price, array $_categories, string $_brand, string $_animalSize, float $_rating)
-  {
+  public function __construct(
+    int $_id,
+    string $_name,
+    float $_price,
+    array $_categories,
+    string $_brand,
+    string $_animalSize,
+    float $_rating
+
+  ) {
     $this->brand = $_brand;
     $this->animalSize = $_animalSize;
     $this->rating = $_rating;

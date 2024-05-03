@@ -1,9 +1,7 @@
 <?php
-require_once __DIR__ . '/Models/Cani.php';
-require_once __DIR__ . '/Models/Gatti.php';
-require_once __DIR__ . '/Models/Cibo.php';
 require_once __DIR__ . '/Models/Product.php';
 require_once __DIR__ . '/Models/ProductCategories.php';
+require_once __DIR__ . '/db.php';
 
 
 
@@ -24,12 +22,21 @@ require_once __DIR__ . '/Models/ProductCategories.php';
   <div class="container">
     <div class="products">
       <h1>Prodotti</h1>
-      <div class="product">
 
-        <?php
+      <?php foreach ($db as $product) : ?>
+        <div class="col p-3 " mb-3>
 
-        ?>
-      </div>
+          <div class="card" style="width: 18rem;">
+
+            <div class="card-body text-center">
+              <h5 class="card-title"><?php echo $product->name ?></h5>
+
+            </div>
+
+          </div>
+        </div>
+
+      <?php endforeach ?>
     </div>
   </div>
 </body>
