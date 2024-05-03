@@ -8,13 +8,13 @@ class Products
   protected $name;
   protected $price;
   // questa sarà la categoria: Animals
-  protected $animals;
+  protected $categories;
 
-  public function __construct(int $_id, string $_name, float $_price, Animals $_animals)
+  public function __construct(int $_id, string $_name, float $_price, array $_categories)
   {
     $this->id = $_id;
     $this->name = $_name;
     $this->price = $_price;
-    $this->animals = $_animals;
+    $this->categories = $_categories;
   }
 }
