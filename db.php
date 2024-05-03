@@ -2,7 +2,11 @@
 
 require_once __DIR__ . 'Models/Product.php';
 
-$db = [
-  new Products(1, 'cibo', 4.99, ['Cani']),
-  new Products(2, 'giochi', 2.99, ['Gatti']),
+$products = [
+  new Cibo(1, 'cibo', 4.99, ['Cani'], 'Royal Canin', 'Taglia media', 8.5),
+];
+
+$categories = [
+  'cani' => new ProductCategory('cani', 'fa-solid fa-dog'),
+  'gatti' => new ProductCategory('gatti', 'fa-solid fa-cat'),
 ];
