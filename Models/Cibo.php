@@ -28,6 +28,7 @@ class Cibo extends Product
     $this->rating = $_rating;
   }
 
+
   
 }
 
