@@ -1,11 +1,12 @@
 <?php
 
 require_once __DIR__ . '/Product.php';
+require_once __DIR__ . '/Barcode.php';
 
 class Cibo extends Product
 {
 
-  use CheckPrice;
+  use Barcode;
 
   public $brand;
   public $animalSize;
@@ -30,10 +31,3 @@ class Cibo extends Product
   
 }
 
-trait CheckPrice {
-  
-  public function getPrice()
-  {
-    return $this->price;
-  }
-}
