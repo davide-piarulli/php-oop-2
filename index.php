@@ -1,11 +1,22 @@
 <?php
 require_once __DIR__ . '/Models/Product.php';
-require_once __DIR__ . '/Models/ProductCategories.php';
-require_once __DIR__ . '/db.php';
+require_once __DIR__ . '/Models/ProductCategory.php';
+require_once __DIR__ . '/Models/Cibo.php';
+require_once __DIR__ . '/data/db.php';
+
+
+$foods = array_filter($products, fn ($product) => get_class($product) === 'Cibo');
+
+var_dump($food);
+
 
 
 
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,21 +33,26 @@ require_once __DIR__ . '/db.php';
   <div class="container">
     <div class="products">
       <h1>Prodotti</h1>
+      <h2>Cibo</h2>
+      <table class="table table-striped ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Prezzo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($foods as $food) : ?>
+            <tr>
+              <th></th>
+              <td><?php echo $food->categories->name ?></td>
+              <td></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
 
-      <?php foreach ($db as $product) : ?>
-        <div class="col p-3 " mb-3>
-
-          <div class="card" style="width: 18rem;">
-
-            <div class="card-body text-center">
-              <h5 class="card-title"><?php echo $product->name ?></h5>
-
-            </div>
-
-          </div>
-        </div>
-
-      <?php endforeach ?>
     </div>
   </div>
 </body>

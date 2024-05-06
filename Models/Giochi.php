@@ -13,15 +13,15 @@ class Giochi extends Product
     int $_id,
     string $_name,
     float $_price,
-    array $_categories,
+    ProductCategory $_categories,
     string $_brand,
     string $_animalSize,
     float $_rating
 
   ) {
+    parent::__construct($_id, $_name, $_price, $_categories);
     $this->brand = $_brand;
     $this->animalSize = $_animalSize;
     $this->rating = $_rating;
-    parent::__construct($_id, $_name, $_price, $_categories);
   }
 }

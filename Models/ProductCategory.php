@@ -2,12 +2,12 @@
 
 class ProductCategory
 {
-  public $type;
+  public $name;
   public $icon;
 
-  public function __construct(string $_type, string $_icon)
+  public function __construct(string $_name, string $_icon)
   {
-    $this->type = $_type;
+    $this->name = $_name;
     $this->icon = $_icon;
   }
 }

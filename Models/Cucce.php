@@ -13,7 +13,7 @@ class Cucce extends Product
     int $_id,
     string $_name,
     float $_price,
-    array $_categories,
+    ProductCategory $_categories,
     string $_brand,
     string $_animalSize,
     float $_rating
