@@ -23,12 +23,17 @@ class Cibo extends Product
 
   ) {
     parent::__construct($_id, $_name, $_price, $_categories);
-    $this->brand = $_brand;
+
+    $this->setBrand($_brand);
     $this->animalSize = $_animalSize;
     $this->rating = $_rating;
   }
 
-
-  
+  public function setBrand($_brand)
+  {
+    if (empty($_brand)) {
+      throw new Exception("Il brand NON può essere vuoto");
+    }
+    $this->brand = $_brand;
+  }
 }
-

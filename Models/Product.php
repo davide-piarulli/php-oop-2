@@ -21,16 +21,5 @@ class Product
     $this->categories = $_categories;
   }
 
-  public function setPrice($_price)
-  {
-    if (!isNumeric($price)) {
-      throw new Exception('Il prezzo accetta solo numeri');
-    }
-    $this->price = $_price;
-  }
-
-  function isNumeric($price)
-  {
-    return preg_match('/^[0-9]+$/', $price);
-  }
+  
 }
