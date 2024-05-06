@@ -5,6 +5,8 @@ require_once __DIR__ . '/Product.php';
 class Cibo extends Product
 {
 
+  use CheckPrice;
+
   public $brand;
   public $animalSize;
   public $rating;
@@ -23,5 +25,15 @@ class Cibo extends Product
     $this->brand = $_brand;
     $this->animalSize = $_animalSize;
     $this->rating = $_rating;
+  }
+
+  
+}
+
+trait CheckPrice {
+  
+  public function getPrice()
+  {
+    return $this->price;
   }
 }

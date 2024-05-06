@@ -9,3 +9,7 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
   Nel “modellizzare” i dati pensate alla differenza che c’è fra prodotti ( cibo, giochi , cucce…) e categorie (cani, gatti…) e come rappresentarli
   Create prima una struttura logica e coerente e stampate tutto con var_dump()
   Solo un un secondo momento create un array di prodotti e stampatelo in pagina con un ciclo
+
+# Day 2
+Oggi continuate a lavorare nella stessa repo di ieri aggiungendo almeno un trait ed un exception al vostro shop!
+nome repo di ieri: php-oop-2
